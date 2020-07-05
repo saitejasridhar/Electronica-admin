@@ -29,11 +29,10 @@ exports.getUserByEmail = async function(email) {
 
 exports.createUser = async function(user){
   const newUser = new User({
-    firstName: user.firstName,
-    lastName: user.lastName,
-    email: user.email,
-    occupation: user.occupation,
-    dateOfBirth: user.dateOfBirth,
+    name: user.name,
+    desc: user.desc,
+    productid: user.productid,
+    category: user.category,
     photo: user.photo
   });
   try {
@@ -62,11 +61,10 @@ exports.updateUser = async function(user){
     return false;
   }
 
-  oldUser.firstName = user.firstName;
-  oldUser.lastName = user.lastName;
-  oldUser.email = user.email;
-  oldUser.occupation = user.occupation;
-  oldUser.dateOfBirth = user.dateOfBirth;
+  oldUser.name = user.name;
+  oldUser.desc = user.desc;
+  oldUser.productid = user.productid;
+  oldUser.category = user.category;
   oldUser.photo = user.photo;
 
   try {

@@ -26,11 +26,10 @@ export class UserFormComponent implements OnInit {
     };
     this.getUser(this.route.snapshot.params['id']);
     this.userForm = this.formBuilder.group({
-      'firstName' : [null, Validators.required],
-      'lastName' : [null, Validators.required],
-      'email': [null, [Validators.email, Validators.required]],
-      'occupation' : [null, Validators.required],
-      'dateOfBirth' : [null, Validators.required],
+      'name' : [null, Validators.required],
+      'desc' : [null, Validators.required],
+      'productid' : [null, Validators.required],
+      'category' : [null, Validators.required],
       'photo': null
     });
   }
@@ -41,11 +40,10 @@ export class UserFormComponent implements OnInit {
       this.isEdit = true;
       this.userService.getUser(id).subscribe(data => {
         this.userForm.setValue({
-          firstName: data.firstName ? data.firstName : '',
-          lastName: data.lastName ? data.lastName : '',
-          email: data.email ? data.email : '',
-          occupation: data.occupation ? data.occupation : '',
-          dateOfBirth: data.dateOfBirth ? new Date(data.dateOfBirth) : '',
+          name: data.name ? data.name : '',
+          desc: data.desc ? data.desc : '',
+          productid: data.productid ? data.productid : '',
+          category: data.category ? data.category : '',
           photo: data.photo ? data.photo : ''
         });
       });

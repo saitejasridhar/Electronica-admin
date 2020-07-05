@@ -13,8 +13,8 @@ import {HttpClientTestingModule} from "@angular/common/http/testing";
 export class UserMockService {
   getUsers(): Observable<User[]> {
     return of([
-      {firstName: 'John', lastName: 'Doe', email: 'john.doe@example.io', occupation:'developer', dateOfBirth: ''},
-      {firstName: 'Steven', lastName: 'Doe', email: 'steven.doe@example.io', occupation:'developer', dateOfBirth: ''}
+      {name: 'John',desc:'hell' ,productid: 'john', category:'Concrete pole' },
+      {name: 'Steven',desc:'hell', productid: 'steven', category:'Concrete pole'}
     ]);
   }
   removeUser(userId:string): Observable<{}> {

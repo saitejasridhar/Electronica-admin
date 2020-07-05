@@ -16,11 +16,10 @@ export class UserListComponent implements OnInit {
 
   columns = [
     { prop: '_id', name: 'Id'},
-    { prop: 'firstName', name: 'First Name' },
-    { prop: 'lastName', name: 'Last Name' },
-    { prop: 'email', name: 'Email' },
-    { prop: 'occupation', name: 'Occupation' },
-    { prop: 'dateOfBirth', name: 'Date of birth'}
+    { prop: 'name', name: 'Name' },
+    { prop: 'desc', name: 'Desc' },
+    { prop: 'productid', name: 'Productid' },
+    { prop: 'category', name: 'Category'},
   ];
   @ViewChild(DatatableComponent) table: DatatableComponent;
   constructor(private userService:UserService) { }

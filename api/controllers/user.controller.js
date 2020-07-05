@@ -21,11 +21,10 @@ exports.getUser = async function(req, res, next) {
 
 exports.createUser = async function(req, res, next) {
   const userToCreate = {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    occupation: req.body.occupation,
-    dateOfBirth: req.body.dateOfBirth,
+    name: req.body.name,
+    desc: req.body.desc,
+    productid: req.body.productid,
+    category: req.body.category,
     photo: req.body.photo
   };
   try {
@@ -40,11 +39,10 @@ exports.updateUser = async function(req, res, next) {
   const id = req.params.id;
   const userToUpdate = {
     id,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    occupation: req.body.occupation,
-    dateOfBirth: req.body.dateOfBirth,
+    name: req.body.name,
+    desc: req.body.desc,
+    productid: req.body.productid,
+    category: req.body.category,
     photo: req.body.photo
   };
   try {
